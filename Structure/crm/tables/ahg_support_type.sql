@@ -16,6 +16,8 @@ CREATE TABLE crm.ahg_support_type
 ALTER TABLE crm.ahg_support_type
     OWNER TO main;
 
+COMMENT ON TABLE crm.ahg_support_type IS 'This table stores the definitions of the CRM support types';
+
 GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON crm.ahg_support_type TO sql_analyst;
 
 GRANT SELECT ON crm.ahg_support_type TO chartio;

@@ -18,6 +18,8 @@ CREATE TABLE crm.account_calculations
 ALTER TABLE crm.account_calculations
     OWNER TO main;
 
+COMMENT ON TABLE crm.account_calculations IS 'This table stores the web_team_config and award eligibility for organizations for the purpose of syncing to CRM';
+
 GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON crm.account_calculations TO sql_analyst;
 
 GRANT SELECT ON crm.account_calculations TO chartio;

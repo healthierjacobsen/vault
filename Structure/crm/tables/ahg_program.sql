@@ -15,6 +15,8 @@ CREATE TABLE crm.ahg_program
 ALTER TABLE crm.ahg_program
     OWNER TO main;
 
+COMMENT ON TABLE crm.ahg_program IS 'This table stores the relationship of a P2 program to a CRM program';
+
 CREATE INDEX ahg_program_p2_program_id_index
     ON crm.ahg_program (p2_program_id);
 

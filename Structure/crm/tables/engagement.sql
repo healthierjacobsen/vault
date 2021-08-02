@@ -47,6 +47,8 @@ CREATE TABLE crm.engagement
 ALTER TABLE crm.engagement
     OWNER TO postgres;
 
+COMMENT ON TABLE crm.engagement IS 'This table stores the engagement records from CRM';
+
 CREATE INDEX engagement_ahg_program_ahg_serviceenddate_statuscode_index
     ON crm.engagement (ahg_program, ahg_serviceenddate, statuscode);
 

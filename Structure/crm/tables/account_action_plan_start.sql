@@ -17,6 +17,8 @@ CREATE TABLE crm.account_action_plan_start
 ALTER TABLE crm.account_action_plan_start
     OWNER TO main;
 
+COMMENT ON TABLE crm.account_action_plan_start IS 'This table stores the action plan start date for organizations for the purpose of syncing to CRM';
+
 GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON crm.account_action_plan_start TO sql_analyst;
 
 GRANT SELECT ON crm.account_action_plan_start TO chartio;

@@ -19,6 +19,8 @@ CREATE TABLE crm.ahg_account_ahg_grant
 ALTER TABLE crm.ahg_account_ahg_grant
     OWNER TO postgres;
 
+COMMENT ON TABLE crm.ahg_account_ahg_grant IS 'This table stores the relationship of an organization to a grant from CRM';
+
 CREATE INDEX ahg_account_ahg_grant_accountid_ahg_grantid_index
     ON crm.ahg_account_ahg_grant (accountid, ahg_grantid);
 

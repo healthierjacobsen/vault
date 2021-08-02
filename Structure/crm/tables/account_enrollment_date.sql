@@ -17,6 +17,8 @@ CREATE TABLE crm.account_enrollment_date
 ALTER TABLE crm.account_enrollment_date
     OWNER TO main;
 
+COMMENT ON TABLE crm.account_enrollment_date IS 'This table stores the online_enrollment_date for organizations for the purpose of syncing to CRM';
+
 GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON crm.account_enrollment_date TO sql_analyst;
 
 GRANT SELECT ON crm.account_enrollment_date TO chartio;

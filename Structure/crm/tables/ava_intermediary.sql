@@ -16,6 +16,8 @@ CREATE TABLE crm.ava_intermediary
 ALTER TABLE crm.ava_intermediary
     OWNER TO main;
 
+COMMENT ON TABLE crm.ava_intermediary IS 'This table stores the definitions of the intermediary status';
+
 GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON crm.ava_intermediary TO sql_analyst;
 
 GRANT SELECT ON crm.ava_intermediary TO chartio;

@@ -19,6 +19,8 @@ CREATE TABLE crm.ahg_grant
 ALTER TABLE crm.ahg_grant
     OWNER TO postgres;
 
+COMMENT ON TABLE crm.ahg_grant IS 'This table stores the grant records from CRM';
+
 GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON crm.ahg_grant TO main;
 
 GRANT SELECT ON crm.ahg_grant TO sql_analyst;
