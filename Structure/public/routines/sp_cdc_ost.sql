@@ -29,7 +29,7 @@ BEGIN
              JOIN live_data.users u ON u.id = uu.user_id AND u.email NOT LIKE '%@healthiergeneration.org%'
              JOIN live_data.organization_user ou ON ou.user_id = u.id AND ou.access_approved_at IS NOT NULL
              JOIN live_data.organizations o ON o.id = ou.organization_id AND o.is_demo IS FALSE
-             JOIN cdc_ost_demographics cod ON cod."p2OrgID" = o.id
+             JOIN public.cdc_ost_demographics cod ON cod."p2OrgID" = o.id
     WHERE o.deleted_at IS NULL
       AND u.deleted_at IS NULL
       AND LOWER(cod.before_after) = 'yes';
@@ -50,7 +50,7 @@ BEGIN
              JOIN live_data.users u ON u.id = uu.user_id AND u.email NOT LIKE '%@healthiergeneration.org%'
              JOIN live_data.organization_user ou ON ou.user_id = u.id AND ou.access_approved_at IS NOT NULL
              JOIN live_data.organizations o ON o.id = ou.organization_id AND o.is_demo IS FALSE
-             JOIN cdc_ost_demographics cod ON cod."p2OrgID" = o.id
+             JOIN public.cdc_ost_demographics cod ON cod."p2OrgID" = o.id
     WHERE o.deleted_at IS NULL
       AND u.deleted_at IS NULL
       AND LOWER(cod.school_grounds) = 'yes';
@@ -68,7 +68,7 @@ BEGIN
     SELECT INTO po_10 COUNT(DISTINCT o.id)
     FROM live_data.organizations o
              JOIN po_10_fully pf ON pf.organization_id = o.id
-             JOIN cdc_ost_demographics cod ON cod."p2OrgID" = o.id
+             JOIN public.cdc_ost_demographics cod ON cod."p2OrgID" = o.id
     WHERE o.deleted_at IS NULL
       AND o.is_demo = FALSE
       AND o.organization_type_id = 100

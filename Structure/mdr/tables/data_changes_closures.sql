@@ -1,3 +1,6 @@
+
+DROP TABLE IF EXISTS mdr.data_changes_closures;
+
 CREATE TABLE mdr.data_changes_closures
 (
     id               serial

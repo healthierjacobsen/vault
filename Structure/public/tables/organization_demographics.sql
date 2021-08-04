@@ -1,4 +1,7 @@
-CREATE TABLE organization_demographics
+
+DROP TABLE IF EXISTS public.organization_demographics;
+
+CREATE TABLE public.organization_demographics
 (
     organization_id          integer               NOT NULL
         CONSTRAINT organization_demographics_pk
@@ -18,10 +21,10 @@ CREATE TABLE organization_demographics
     school_year_enrollment   integer
 );
 
-ALTER TABLE organization_demographics
+ALTER TABLE public.organization_demographics
     OWNER TO main;
 
-GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON organization_demographics TO sql_analyst;
+GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON public.organization_demographics TO sql_analyst;
 
-GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON organization_demographics TO chartio;
+GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON public.organization_demographics TO chartio;
 

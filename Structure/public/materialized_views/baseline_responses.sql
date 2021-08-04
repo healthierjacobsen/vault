@@ -1,3 +1,6 @@
+
+DROP MATERIALIZED VIEW IF EXISTS baseline_responses;
+
 CREATE MATERIALIZED VIEW baseline_responses AS
 WITH first AS (
     SELECT r.organization_id,

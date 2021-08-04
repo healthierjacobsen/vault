@@ -1,3 +1,6 @@
+
+DROP TABLE IF EXISTS mdr.close_merge;
+
 CREATE TABLE mdr.close_merge
 (
     id                         integer,

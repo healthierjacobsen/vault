@@ -1,4 +1,7 @@
-CREATE TABLE reporting_modules
+
+DROP TABLE IF EXISTS public.reporting_modules;
+
+CREATE TABLE public.reporting_modules
 (
     id               serial
         CONSTRAINT reporting_modules_pk
@@ -7,10 +10,10 @@ CREATE TABLE reporting_modules
     criterion_handle varchar NOT NULL
 );
 
-ALTER TABLE reporting_modules
+ALTER TABLE public.reporting_modules
     OWNER TO main;
 
-GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON reporting_modules TO sql_analyst;
+GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON public.reporting_modules TO sql_analyst;
 
-GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON reporting_modules TO chartio;
+GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON public.reporting_modules TO chartio;
 

@@ -36,7 +36,7 @@ BEGIN
                                    FROM live_data.responses r
                                             JOIN live_data.response_values rv ON rv.id = r.response_value_id
                                             JOIN live_data.organizations o ON o.id = r.organization_id
-                                   WHERE r.created_at < (SELECT created_at FROM live_data.sets WHERE id = ' ||
+                                   WHERE r.created_at > (SELECT created_at FROM live_data.sets WHERE id = ' ||
             _set_id || ')
                                ) z
                           WHERE row_num = 1

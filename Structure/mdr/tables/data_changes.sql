@@ -1,3 +1,6 @@
+
+DROP TABLE IF EXISTS mdr.data_changes;
+
 CREATE TABLE mdr.data_changes
 (
     id               serial

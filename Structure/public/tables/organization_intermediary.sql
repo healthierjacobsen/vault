@@ -1,4 +1,7 @@
-CREATE TABLE organization_intermediary
+
+DROP TABLE IF EXISTS public.organization_intermediary;
+
+CREATE TABLE public.organization_intermediary
 (
     organization_id integer NOT NULL
         CONSTRAINT organization_intermediary_pk
@@ -6,10 +9,10 @@ CREATE TABLE organization_intermediary
     intermediary_id integer NOT NULL
 );
 
-ALTER TABLE organization_intermediary
+ALTER TABLE public.organization_intermediary
     OWNER TO main;
 
-GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON organization_intermediary TO sql_analyst;
+GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON public.organization_intermediary TO sql_analyst;
 
-GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON organization_intermediary TO chartio;
+GRANT DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, UPDATE ON public.organization_intermediary TO chartio;
 

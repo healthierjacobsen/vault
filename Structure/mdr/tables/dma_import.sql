@@ -1,3 +1,6 @@
+
+DROP TABLE IF EXISTS mdr.dma_import;
+
 CREATE TABLE mdr.dma_import
 (
     dma_code integer,
